@@ -1,0 +1,15 @@
+{
+  "name": "repo-email-feedback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "ncc": "^0.3.6"
+  },
+  "scripts": {
+    "build": "ncc build action.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
