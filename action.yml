@@ -1,17 +1,25 @@
 name: 'feedback'
 description: 'Send an email to someone who appreciates you'
 inputs:
-  repo:
-    description: 'repo'
-    required: true
-    default: 'd2-projects/d2-admin'
+  to:
+    description: 'to some one'
+    required: false
+    default: ''
   actor:
     description: 'actor'
-    required: true
-    default: 'FairyEver'
+    required: false
+    default: ''
   token:
     description: 'token'
-    required: true
+    required: false
+    default: ''
+  template:
+    description: 'template'
+    required: false
+    default: ''
+  repo:
+    description: 'repo'
+    required: false
     default: ''
 runs:
   using: 'node12'

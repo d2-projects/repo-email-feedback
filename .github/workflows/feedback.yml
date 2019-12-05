@@ -12,6 +12,7 @@ jobs:
       id: feedback
       uses: d2-projects/repo-email-feedback@master
       with:
+        template: repo-feedback
         repo: ${{ github.repository }}
         actor: ${{ github.actor }}
         token: ${{ secrets.GITHUB_TOKEN }}
