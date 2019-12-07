@@ -1,6 +1,14 @@
 name: 'feedback'
 description: 'Send an email to someone who appreciates you'
 inputs:
+  username:
+    description: 'username'
+    required: true
+    default: ''
+  sign:
+    description: 'sign'
+    required: true
+    default: ''
   to:
     description: 'to some one'
     required: false

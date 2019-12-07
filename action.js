@@ -7,6 +7,8 @@ const axios = require('axios')
       url: 'http://129.204.88.19/api/repo-email-feedback',
       method: 'get',
       params: {
+        username: core.getInput('username'),
+        sign: core.getInput('sign'),
         to: core.getInput('to'),
         actor: core.getInput('actor'),
         token: core.getInput('token'),
