@@ -23,8 +23,10 @@ jobs:
     steps:
     - name: feedback
       id: feedback
-      uses: d2-projects/repo-email-feedback@v1.1
+      uses: d2-projects/repo-email-feedback@v1.2
       with:
+        username: ${{ secrets.FEEDBACK_USERNAME }}
+        sign: ${{ secrets.FEEDBACK_SIGN }}
         template: repo-feedback
         repo: ${{ github.repository }}
         actor: ${{ github.actor }}
@@ -46,8 +48,10 @@ jobs:
     steps:
     - name: feedback
       id: feedback
-      uses: d2-projects/repo-email-feedback@v1.1
+      uses: d2-projects/repo-email-feedback@v1.2
       with:
+        username: ${{ secrets.FEEDBACK_USERNAME }}
+        sign: ${{ secrets.FEEDBACK_SIGN }}
         repo: ${{ github.repository }}
         actor: ${{ github.actor }}
         token: ${{ secrets.GITHUB_TOKEN }}
