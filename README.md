@@ -4,44 +4,11 @@
 
 # 使用
 
-## 触发条件
-
-由 `fork` / `star` / `issue` 事件触发邮件操作
-
-``` yml
-on: [fork, watch, issues]
-```
-
-`fork` 仓库时触发：
-
-``` yml
-on:
-  fork
-```
-
-`star` 仓库时触发：
-
-``` yml
-on:
-  watch
-    types: [started]
-```
-
-问题操作时触发：
-
-``` yml
-on:
-  issues:
-    types: [opened, edited, milestoned]
-```
-
-参考 [GitHub Actions | 触发工作流程的事件](https://help.github.com/cn/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows)
+在仓库中建立文件 `.github/workflows/feedback.yml` 内容如下：
 
 ## 针对一般项目
 
 ### 通用
-
-.github/workflows/feedback.yml
 
 ``` yml
 name: feedback
@@ -66,8 +33,6 @@ jobs:
 
 ## 配置了专用模板的项目
 
-.github/workflows/feedback.yml
-
 ``` yml
 name: feedback
 
@@ -87,3 +52,36 @@ jobs:
         actor: ${{ github.actor }}
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+## 触发条件
+
+`fork` 仓库时触发：
+
+``` yml
+on:
+  fork
+```
+
+`star` 仓库时触发：
+
+``` yml
+on:
+  watch
+    types: [started]
+```
+
+问题操作时触发：
+
+``` yml
+on:
+  issues:
+    types: [opened, edited, milestoned]
+```
+
+由多个事件触发：
+
+``` yml
+on: [fork, watch, issues]
+```
+
+参考 [GitHub Actions | 触发工作流程的事件](https://help.github.com/cn/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows)
