@@ -10,7 +10,9 @@
 
 ### 1.2 配置签名到 GitHub
 
-访问 `https://github.com/您的用户名/仓库名称/settings/secrets`，或者在您的仓库首页点击 **Settings**，然后从侧边栏找到 **Secrets** 选项，然后通过 **Add a new secret** 按钮创建两个密文：
+在拿到管理员给您的 `FEEDBACK_USERNAME` 和 `FEEDBACK_SIGN` 之后，访问 `https://github.com/您的用户名/仓库名称/settings/secrets`，或者在您的仓库首页点击 **Settings**，然后从侧边栏找到 **Secrets** 选项，然后通过 **Add a new secret** 按钮创建两个密文：
+
+**密文的 Name 和 Value 必须严格按照下表设置**
 
 | Name | Value |
 | --- | --- |
@@ -89,38 +91,3 @@ jobs:
 > 使用定制邮件时 `.yml` 的最大区别是无需提供 `template` 字段，服务会根据 `repo` 字段调用您的专用模板
 
 操作完成上面的步骤之后，将最新的代码提交到您的仓库，即完成整个所有工作。
-
-# 帮助
-
-## 可选的触发条件
-
-`fork` 仓库时触发：
-
-``` yml
-on:
-  fork
-```
-
-`star` 仓库时触发：
-
-``` yml
-on:
-  watch
-    types: [started]
-```
-
-问题操作时触发：
-
-``` yml
-on:
-  issues:
-    types: [opened, edited, milestoned]
-```
-
-由多个事件触发：
-
-``` yml
-on: [fork, watch, issues]
-```
-
-所有可选项请参考 [GitHub Actions | 触发工作流程的事件](https://help.github.com/cn/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows)
