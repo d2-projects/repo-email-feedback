@@ -35,17 +35,11 @@
 
 ``` yml
 name: feedback
-
 on: [fork, watch, issues]
-
 jobs:
-
   feedback:
-
     runs-on: ubuntu-latest
-
     steps:
-
     - name: feedback
       id: feedback
       uses: d2-projects/repo-email-feedback@v1.2
@@ -66,28 +60,21 @@ jobs:
 
 ``` yml
 name: feedback
-
 on: [fork, watch, issues]
-
 jobs:
-
   feedback:
-
     runs-on: ubuntu-latest
-
     steps:
-
     - name: feedback
       id: feedback
       uses: d2-projects/repo-email-feedback@v1.2
       with:
         username: ${{ secrets.FEEDBACK_USERNAME }}
         sign: ${{ secrets.FEEDBACK_SIGN }}
+        template: ${{ github.repository }}
         repo: ${{ github.repository }}
         actor: ${{ github.actor }}
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
-
-> 使用定制邮件时 `.yml` 的最大区别是无需提供 `template` 字段，服务会根据 `repo` 字段调用您的专用模板
 
 操作完成上面的步骤之后，将最新的代码提交到您的仓库，即完成整个所有工作。
