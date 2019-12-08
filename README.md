@@ -1,6 +1,4 @@
-在项目 star 或者 fork 时自动发送邮件给触发者
-
-[GitHub Action](https://github.com/d2-projects/repo-email-feedback)
+![](https://qiniucdn.fairyever.com/20191208151505.png)
 
 # 两步配置
 
