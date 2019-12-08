@@ -1,4 +1,4 @@
-![](https://qiniucdn.fairyever.com/20191208151505.png)
+![](https://raw.githubusercontent.com/d2-projects/repo-email-feedback/master/doc/image/banner.png)
 
 # 两步配置
 
