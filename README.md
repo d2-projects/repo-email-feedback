@@ -46,6 +46,7 @@ jobs:
       with:
         username: ${{ secrets.FEEDBACK_USERNAME }}
         sign: ${{ secrets.FEEDBACK_SIGN }}
+        wxpusher: ${{ secrets.FEEDBACK_WXPUSHER_UID }}
         template: repo-feedback
         repo: ${{ github.repository }}
         actor: ${{ github.actor }}
@@ -71,6 +72,7 @@ jobs:
       with:
         username: ${{ secrets.FEEDBACK_USERNAME }}
         sign: ${{ secrets.FEEDBACK_SIGN }}
+        wxpusher: ${{ secrets.FEEDBACK_WXPUSHER_UID }}
         template: ${{ github.repository }}
         repo: ${{ github.repository }}
         actor: ${{ github.actor }}
