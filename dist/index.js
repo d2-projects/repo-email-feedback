@@ -1392,7 +1392,7 @@ const axios = __webpack_require__(724)
 ;(async function () {
   try {
     const result = await axios({
-      url: 'http://129.204.88.19/api/repo-email-feedback/send',
+      url: 'https://www.d2.pub/api/repo-email-feedback/send',
       method: 'get',
       params: {
         username: core.getInput('username'),
