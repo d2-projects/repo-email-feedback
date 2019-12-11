@@ -9,6 +9,10 @@ inputs:
     description: 'sign'
     required: true
     default: ''
+  wxpusher:
+    description: 'wxpusher'
+    required: false
+    default: ''
   to:
     description: 'to some one'
     required: false

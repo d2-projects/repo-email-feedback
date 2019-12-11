@@ -42,7 +42,7 @@ jobs:
     steps:
     - name: feedback
       id: feedback
-      uses: d2-projects/repo-email-feedback@v1.2
+      uses: d2-projects/repo-email-feedback@v1.3
       with:
         username: ${{ secrets.FEEDBACK_USERNAME }}
         sign: ${{ secrets.FEEDBACK_SIGN }}
@@ -68,7 +68,7 @@ jobs:
     steps:
     - name: feedback
       id: feedback
-      uses: d2-projects/repo-email-feedback@v1.2
+      uses: d2-projects/repo-email-feedback@v1.3
       with:
         username: ${{ secrets.FEEDBACK_USERNAME }}
         sign: ${{ secrets.FEEDBACK_SIGN }}

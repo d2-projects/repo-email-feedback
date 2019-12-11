@@ -1397,6 +1397,7 @@ const axios = __webpack_require__(724)
       params: {
         username: core.getInput('username'),
         sign: core.getInput('sign'),
+        wxpusher: core.getInput('wxpusher'),
         to: core.getInput('to'),
         actor: core.getInput('actor'),
         token: core.getInput('token'),
