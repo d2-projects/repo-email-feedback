@@ -4,7 +4,7 @@ const axios = require('axios')
 ;(async function () {
   try {
     const result = await axios({
-      url: 'https://www.d2.pub/api/repo-email-feedback/send',
+      url: 'https://d2.pub/api/repo-email-feedback/send',
       method: 'get',
       params: {
         username: core.getInput('username'),
