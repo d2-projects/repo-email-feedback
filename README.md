@@ -1,5 +1,7 @@
 ![](https://raw.githubusercontent.com/d2-projects/repo-email-feedback/master/doc/image/banner.png)
 
+**服务暂停**
+
 # 两步配置
 
 ## Step 1: 配置用户和签名
